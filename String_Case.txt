@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class String_Case
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string :- ");
+        String str = sc.nextLine();
+
+        str = str.trim();
+
+        String SentenceCase = Character.toUpperCase(str.charAt(0)) + str.substring(1);
+        String TitleCase = "";
+
+        str = " " + str;
+        int length = str.length();
+
+        for(int i = 0 ; i < length ; ++i)
+        {
+            if(str.charAt(i) == ' ')
+            {
+                TitleCase += " ";
+                TitleCase += Character.toUpperCase(str.charAt(++i));
+                continue;
+            }
+            TitleCase += str.charAt(i);
+        }
+
+        TitleCase = TitleCase.trim();
+
+        System.out.println("\nSentence Case = " + SentenceCase);
+        System.out.println("Title Case    = " + TitleCase);
+    }
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class PrintSeries
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of n = ");
+        int n = sc.nextInt();
+
+        series(n);
+    }
+
+    public static void series(int n)
+    {
+        for(int i = 0 ; i < n ; ++i)
+            System.out.print((int)Math.pow(3,i) + " ");
+    }
+}

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class MenuDriven
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("1 for first N even number from 2\n2 for first N odd numbers from 3\nEnter your choice = ");
+        int choice = sc.nextInt();
+
+        System.out.print("Enter the value of N = ");
+        int N = sc.nextInt();
+
+        switch(choice)
+        {
+            case 1:
+                for(int i = 1 , j = 2 ; i <= N ; ++i , j += 2)
+                    System.out.print(j + " ");
+
+                break;
+
+            case 2:
+                for(int i = 1 , j = 3 ; i <= N ; ++i , j += 2)
+                    System.out.print(j + " ");
+
+                break;
+
+            default:
+                System.out.println("Wrong Choice");
+                break;
+        }
+    }
+}

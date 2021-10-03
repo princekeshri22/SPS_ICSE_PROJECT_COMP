@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class LinearSearch
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int source[] = {12, 64, 81, 50, 45, 100, 92, 75, 4, 26};
+        int len = source.length;
+
+        System.out.print("Enter element to be searched = ");
+        int key = sc.nextInt();
+
+        int i;
+
+        for(i = 0 ; i < len ; ++i)
+        {
+            if(source[i] == key)
+            {
+                System.out.println("\nElement " + key + " is present in the array");
+                break;
+            }
+        }
+
+        if(i == len)
+            System.out.println("\nElement " + key + " is not present in the array");
+    }
+}

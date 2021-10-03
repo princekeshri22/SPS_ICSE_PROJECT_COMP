@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class DisplayOverload
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        DisplayOverload ob = new DisplayOverload();
+
+        System.out.print("Enter two integers = ");
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+
+        System.out.print("Enter two floating-point numbers = ");
+        double fn1 = sc.nextDouble();
+        double fn2 = sc.nextDouble();
+
+        System.out.print("Enter two characters = ");
+        char ch1 = sc.next().charAt(0);
+        char ch2 = sc.next().charAt(0);
+
+        ob.display(n1,n2);
+        ob.display(fn1,fn2);
+        ob.display(ch1,ch2);
+    }
+
+    void display(int a, int b)
+    {
+        System.out.println("Sum of " + a + " and " + b + " is " + (a+b));
+    }
+
+    void display(double a, double b)
+    {
+        System.out.println("Sum of " + a + " and " + b + " is " + (a+b));
+    }
+
+    void display(char a, char b)
+    {
+        System.out.println("Sum of the ASCII values of \'" + a + "\' and \'" + b + "\' is " + (a+b));
+    }
+}

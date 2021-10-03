@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class BinarySearch
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int source[] = {4,12,26,45,50,64,75,81,92,100};
+        int len = source.length;
+
+        System.out.print("Enter element to be searched = ");
+        int key = sc.nextInt();
+
+        int l  = 0;
+        int r  = len;
+        int mid;
+
+        while(l<r)
+        {
+            mid = (l+r)/2;
+
+            if(source[mid]==key)
+            {
+                System.out.println("\nElement " + key + " is present in the array");
+                break;
+            }
+
+            if(key > source[mid])
+                l = mid + 1;
+            else
+                r = mid - 1;
+        }
+
+        if(r==l)
+            System.out.println("\nElement " + key + " is not present in the array");
+    }
+}

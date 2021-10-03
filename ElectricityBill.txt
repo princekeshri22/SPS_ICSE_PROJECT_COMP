@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class ElectricityBill
+{
+    String name;
+    int units;
+    double bill;
+
+    ElectricityBill(String n, int u)
+    {
+        name = n;
+        units = u;
+    }
+
+    void calculate()
+    {
+        double b = 0.0;
+
+        if(units <= 100)
+        {
+            b = units*2.0;
+        }
+        else if(units > 100 && units <= 300)
+        {
+            b = (100*2.0) + ((units-100)*3.0);
+        }
+        else
+        {
+            b = (100*2.0) + (200*3.0) + ((units-300)*5.0);
+        }
+
+        bill = b;
+    }
+
+    void show()
+    {
+        System.out.println("\nName of the customer:" + name);
+        System.out.println("Number of units consumed:" + units);
+        System.out.println("Bill amount:" + bill);
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter name and number of units consumed :- ");
+        String nm = sc.next();
+        int unt = sc.nextInt();
+
+        ElectricityBill obj = new ElectricityBill(nm,unt);
+        obj.calculate();
+        obj.show();
+    }
+}

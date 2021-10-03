@@ -1,0 +1,37 @@
+import java.util.Scanner;
+class TwinPrime
+{
+    private boolean isPrime(int n)
+    {
+        int fac = 0;
+
+        for(int i = 1 ; i <= n ; ++i)
+        {
+            if(n%i == 0)
+            {
+                fac++;
+            }
+        }
+
+        return fac==2;
+    }
+
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        TwinPrime ob = new TwinPrime();
+
+        System.out.print("Enter two numbers = ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(ob.isPrime(a) && ob.isPrime(b) && (Math.abs(a-b) == 2))
+        {
+            System.out.println(a + " and " + b + " are TwinPrime Numbers");
+        }
+        else
+        {
+            System.out.println(a + " and " + b + " are not TwinPrime Numbers");
+        }
+    }
+}

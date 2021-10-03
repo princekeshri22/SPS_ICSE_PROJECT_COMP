@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class ShapeVolume
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        ShapeVolume ob = new ShapeVolume();
+
+        System.out.print("Enter side of a cube = ");
+        double side = sc.nextDouble();
+
+        System.out.print("Enter radius and height of a cone = ");
+        double radius = sc.nextDouble();
+        double height = sc.nextDouble();
+
+        System.out.print("Enter length, width and height of a cuboid = ");
+        double length = sc.nextDouble();
+        double width = sc.nextDouble();
+        double Height = sc.nextDouble();
+
+        System.out.println("\nVolume of cube = " + ob.volume(side));
+        System.out.println("Volume of cone = " + ob.volume(radius,height));
+        System.out.println("Volume of cuboid = " + ob.volume(length,width,Height));
+
+    }
+
+    double volume(double side)
+    {
+        return Math.pow(side,3);
+    }
+
+    double volume(double radius, double height)
+    {
+        return 1.0/3.0*Math.PI*Math.pow(radius,2)*height;
+    }
+
+    double volume(double length, double width, double height)
+    {
+        return length*width*height;
+    }
+}

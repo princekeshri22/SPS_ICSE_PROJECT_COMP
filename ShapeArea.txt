@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class ShapeArea
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        ShapeArea ob = new ShapeArea();
+
+        System.out.print("Enter side of a square = ");
+        double side = sc.nextDouble();
+
+        System.out.print("Enter length and breadth of a rectangle = ");
+        double length = sc.nextDouble();
+        double breadth = sc.nextDouble();
+
+        System.out.print("Enter three sides of a triangle = ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+
+        System.out.println("\nArea of square = " + ob.area(side));
+        System.out.println("Area of rectangle = " + ob.area(length,breadth));
+        System.out.println("Area of triangle = " + ob.area(a,b,c));
+
+    }
+
+    double area(double side)
+    {
+        return Math.pow(side,2);
+    }
+
+    double area(double length, double breadth)
+    {
+        return length*breadth;
+    }
+
+    double area(double a, double b, double c)
+    {
+        double s = (a+b+c)/2.0;
+        return Math.sqrt(s*(s-a)*(s-b)*(s-c));
+    }
+}

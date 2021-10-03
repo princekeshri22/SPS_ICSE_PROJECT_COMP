@@ -1,0 +1,37 @@
+import java.util.Scanner;
+class String_letters
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string :- ");
+        String str = sc.nextLine();
+
+        int length = str.length();
+
+        int alpha = 0;
+        int dig = 0;
+        int spchr = 0;
+
+        for(int i = 0 ; i < length ; ++i)
+        {
+            if(Character.isLetter(str.charAt(i)))
+            {
+                ++alpha;
+            }
+            else if(Character.isDigit(str.charAt(i)))
+            {
+                ++dig;
+            }
+            else
+            {
+                ++spchr;
+            }
+        }
+
+        System.out.println("No. of Alphabets = " + alpha);
+        System.out.println("No. of Digits = " + dig);
+        System.out.println("No. of Special Characters = " + spchr);
+    }
+}

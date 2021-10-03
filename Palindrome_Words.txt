@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class Palindrome_Words
+{
+    private boolean isPalin(String s)
+    {
+        String rev = "";
+
+        for(int i = s.length()-1 ; i >= 0 ; --i)
+        {
+            rev += s.charAt(i);
+        }
+
+        return s.equals(rev);
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Palindrome_Words ob = new Palindrome_Words();
+
+        System.out.print("Enter any sentence :- ");
+        String str = sc.nextLine();
+
+        str.trim();
+        str += " ";
+
+        int length = str.length();
+
+        String word = "";
+
+        for(int i = 0 ; i < length ; ++i)
+        {
+            word = "";
+            for(; str.charAt(i) != ' ' ; ++i)
+            {
+                word += str.charAt(i);
+            }
+
+            if(ob.isPalin(word))
+            {
+                System.out.println(word);
+            }
+        }
+    }
+}
