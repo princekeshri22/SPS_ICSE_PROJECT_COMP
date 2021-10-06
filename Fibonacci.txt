@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class Fibonacci
+{
+    int a,b,c,n;
+    
+    Fibonacci()
+    {
+        a = 0;
+        b = 1;
+    }
+    
+    void input()
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter the number of terms :- ");
+        n = sc.nextInt();
+    }
+    
+    void show()
+    {
+        for(int i = 1 ; i < n ; ++i)
+        {
+            System.out.print(a + ", ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        System.out.println(a);
+    }
+    
+    public static void main(String[] args)
+    {
+        Fibonacci obj = new Fibonacci();
+        
+        obj.input();
+        obj.show();
+    }
+}
