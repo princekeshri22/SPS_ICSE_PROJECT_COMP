@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class Movie
+{
+    String title;
+    int year;
+    double rating;
+    
+    void input()
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter Movie Title - ");
+        title = sc.nextLine();
+        
+        System.out.print("Enter Year and Rating Values - ");
+        year = sc.nextInt();
+        rating = sc.nextDouble();
+    }
+    
+    void display()
+    {
+        String message = "";
+        
+        if(rating < 3.0)
+        {
+            message = "Flop";
+        }
+        else if(rating >= 3.0 && rating < 4.0)
+        {
+            message = "Average";
+        }
+        else
+        {
+            message = "Hit";
+        }
+        
+        System.out.println(message);
+    }
+    
+    public static void main(String[] args)
+    {
+        Movie obj = new Movie();
+        
+        obj.input();
+        obj.display();
+    }
+}
