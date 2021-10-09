@@ -34,3 +34,32 @@ class BinarySearch
             System.out.println("\nElement " + key + " is not present in the array");
     }
 }
+
+
+/*
+
+______________________________________
+| Variable | Data Type | Description |
+|__________+___________+_____________|
+|          |           | Stores the  |
+|  source  |   int[]   | un-sorted   |
+|          |           | data.       |
+|----------|-----------|-------------|
+|          |           |  Length of  |
+|   len    |    int    |  the        |
+|          |           |  un_sorted  |
+|          |           |  array.     |
+|----------|-----------|-------------|
+|    l     |    int    | Left search |
+|          |           | index.      |
+|----------|-----------|-------------|
+|    r     |    int    | Right search|
+|          |           | index.      |
+|----------|-----------|-------------|
+|          |           | Mid Point of|
+|    mid   |    int    | the bisected|
+|          |           | array.      |
+|__________+___________+_____________|
+
+
+*/
