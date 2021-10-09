@@ -28,3 +28,28 @@ class CompositeCheck
         }
     }
 }
+
+/*
+
+______________________________________
+| Variable | Data Type | Description |
+|__________+___________+_____________|
+|          |           | Stores the  |
+|    n     |    int    | integer for |
+|          |           | composite   |
+|          |           | check.      |
+|----------|-----------|-------------|
+|          |           | stores the  |
+|          |           | the number  |
+|  factors |    int    | of factors  |
+|          |           | of integer  |
+|          |           | stored in n.|
+|----------|-----------|-------------|
+|     i    |    int    | Loop Counter|
+|          |           | variable for|
+|          |           | counting    |
+|          |           | factors of n|
+|__________+___________+_____________|
+
+
+*/
