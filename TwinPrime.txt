@@ -35,3 +35,37 @@ class TwinPrime
         }
     }
 }
+
+/*
+
+______________________________________
+| Variable | Data Type | Description |
+|__________+___________+_____________|
+|          |           | Formal      |
+|          |           | parameter   |
+|          |           | for storing |
+|     n    |     int   | the value to|
+|          |           | check for   |
+|          |           | prime.      |
+|----------|-----------|-------------|
+|          |           |  stores the |
+|   fac    |    int    |  number of  |
+|          |           |  factors of |
+|          |           |  n.         |
+|----------|-----------|-------------|
+|          |           | Loop Counter|
+|     i    |    int    | variable for|
+|          |           | finding     |
+|          |           | factors of n|
+|----------|-----------|-------------|
+|          |           | Accepting a |
+|     a    |    int    | number from |
+|          |           | the user.   |
+|----------|-----------|-------------|
+|          |           | Accepting a |
+|     b    |    int    | number from |
+|          |           | the user.   |
+|__________+___________+_____________|
+
+
+*/
